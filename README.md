@@ -10,8 +10,9 @@ Features
 - Animated piece movement.
 - Move log display.
 - In-game status messages (Check, Checkmate, Stalemate).
+
 Requirements
-- Python 3.x
+- Python 3
 - Pygame
 Installation
 - Clone the repository
