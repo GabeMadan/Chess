@@ -15,7 +15,7 @@ Requirements
 - Pygame
 Installation
 - Clone the repository
-- Navigate to the chess project directory:
+- Navigate to the Chess directory:
 - Run the game using python Chessmain.py
 Game controls:
 - Use the mouse to select and move pieces.
