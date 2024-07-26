@@ -1,4 +1,4 @@
-# Single-Player/Multiplayer Chess Game with AI Engine
+# Multiplayer Chess Game with AI Engine
 
 Overview
 
