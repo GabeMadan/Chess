@@ -1,15 +1,11 @@
 import random
 import numpy as np
-import chessMain
 
-# Constants for checkmate and stalemate scores
 CHECKMATE = 1000
 STALEMATE = 0
 
-# Dictionary to hold the base scores for each piece
 pieceScores = {"K": 0, "Q": 8, "R": 5, "N": 3, "B": 3, "p": 1}
 
-# Positional scores for knights
 knightScores = np.array([[1, 1, 1, 1, 1, 1, 1, 1],
                          [1, 2, 2, 2, 2, 2, 2, 1],
                          [1, 2, 3, 3, 3, 3, 2, 1],
@@ -19,7 +15,6 @@ knightScores = np.array([[1, 1, 1, 1, 1, 1, 1, 1],
                          [1, 2, 2, 2, 2, 2, 2, 1],
                          [1, 1, 1, 1, 1, 1, 1, 1]])
 
-# Positional scores for bishops
 bishopScores = np.array([[4, 3, 2, 1, 1, 2, 3, 4],
                          [3, 4, 3, 2, 2, 3, 4, 3],
                          [2, 3, 4, 3, 3, 4, 3, 2],
@@ -29,7 +24,6 @@ bishopScores = np.array([[4, 3, 2, 1, 1, 2, 3, 4],
                          [3, 4, 3, 2, 2, 3, 4, 3],
                          [4, 3, 2, 1, 1, 2, 3, 4]])
 
-# Positional scores for queens
 queenScores = np.array([[1, 1, 1, 3, 1, 1, 1, 1],
                         [1, 2, 3, 3, 3, 1, 1, 1],
                         [1, 4, 3, 3, 3, 4, 2, 1],
@@ -39,7 +33,6 @@ queenScores = np.array([[1, 1, 1, 3, 1, 1, 1, 1],
                         [1, 1, 2, 3, 3, 1, 1, 1],
                         [1, 1, 1, 3, 1, 1, 1, 1]])
 
-# Positional scores for rooks
 rookScores = np.array([[4, 3, 4, 4, 4, 4, 3, 4],
                        [4, 4, 4, 4, 4, 4, 4, 4],
                        [1, 1, 2, 3, 3, 2, 1, 1],
@@ -49,7 +42,6 @@ rookScores = np.array([[4, 3, 4, 4, 4, 4, 3, 4],
                        [4, 4, 4, 4, 4, 4, 4, 4],
                        [4, 3, 4, 4, 4, 4, 3, 4]])
 
-# Positional scores for white pawns
 whitePawnScores = np.array([[8, 8, 8, 8, 8, 8, 8, 8],
                             [8, 8, 8, 8, 8, 8, 8, 8],
                             [5, 6, 6, 7, 7, 6, 6, 5],
@@ -59,7 +51,6 @@ whitePawnScores = np.array([[8, 8, 8, 8, 8, 8, 8, 8],
                             [1, 1, 1, 0, 0, 1, 1, 1],
                             [0, 0, 0, 0, 0, 0, 0, 0]])
 
-# Positional scores for black pawns
 blackPawnScores = np.array([[0, 0, 0, 0, 0, 0, 0, 0],
                             [1, 1, 1, 0, 0, 1, 1, 1],
                             [1, 2, 2, 3, 3, 2, 1, 1],
@@ -69,7 +60,6 @@ blackPawnScores = np.array([[0, 0, 0, 0, 0, 0, 0, 0],
                             [8, 8, 8, 8, 8, 8, 8, 8],
                             [8, 8, 8, 8, 8, 8, 8, 8]])
 
-# Dictionary to hold positional scores for each piece type
 piecePositionScores = {"N": knightScores, "Q": queenScores, "B": bishopScores, "R": rookScores, "bp": blackPawnScores, "wp": whitePawnScores}
 
 # Function to find a random move from a list of valid moves

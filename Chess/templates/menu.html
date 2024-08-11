@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Main Menu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div id="mainMenu">
+        <h1>Chess</h1>
+        <button id="playerModeBtn">One Player</button>
+        <div id="depthSliderContainer">
+            <label for="depthSlider">Depth: <span id="depthValue">2</span></label>
+            <input type="range" id="depthSlider" min="1" max="5" value="2">
+        </div>
+        <button id="startGameBtn">Start Game</button>
+    </div>
+    <script src="{{ url_for('static', filename='js/menu.js') }}"></script>
+</body>
+</html>

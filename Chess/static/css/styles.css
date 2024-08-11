@@ -1,0 +1,163 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('/static/images/menu_background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#mainMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#mainMenu h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+button {
+    font-size: 1.2em;
+    margin: 10px;
+    padding: 10px 20px;
+}
+
+#depthSliderContainer {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+#depthSlider {
+    margin-left: 10px;
+}
+
+#chessBoard {
+    display: grid;
+    grid-template-columns: repeat(8, 64px);
+    grid-template-rows: repeat(8, 64px);
+    gap: 0;
+    border: 2px solid #333;
+}
+
+.square {
+    width: 64px;
+    height: 64px;
+}
+.chess-board {
+    width: 512px;
+    height: 512px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+.square {
+    width: 64px;
+    height: 64px;
+    position: relative;
+}
+
+.light {
+    background-color: #f0d9b5;
+}
+
+.dark {
+    background-color: #b58863;
+}
+.highlight-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    pointer-events: none; 
+}
+
+.highlighted {
+    background-color: rgba(255, 191, 0, 0.6); 
+}
+.selected {
+    background-color: rgba(128, 0, 128, 0.5); 
+}
+#gameOverMessage {
+    font-size: 2em;
+    color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.game-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.move-log {
+    width: 200px;
+    height: 512px;
+    overflow-y: auto;
+    border: 1px solid #444;
+    background-color: #fff;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 14px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-left: 10px;
+}
+
+.move-log-table td {
+    padding: 2px;
+    vertical-align: top;
+}
+
+.white-move {
+    color: black;
+}
+
+.black-move {
+    color: black;
+}
+.move-log-header {
+    font-weight: bold;
+    text-align: left;
+    padding: 5px 0;
+}
+
+.last-move {
+    background-color: rgba(126, 117, 91, 0.5); 
+}
+.move-log-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; 
+}
+
+.fixed-width-cell {
+    width: 50%;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+    text-align: left;
+}
+
+.move-log-title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.move-index {
+    text-align: right;
+}
